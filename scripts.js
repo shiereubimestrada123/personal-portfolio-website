@@ -8,6 +8,8 @@ const contentList = document.querySelectorAll(
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navMenu');
 
+const sectionParent = document.querySelector('section');
+
 handleNavList.forEach((navList, navIndex) => {
   navList.addEventListener('click', (e) => {
     e.preventDefault();
@@ -16,10 +18,12 @@ handleNavList.forEach((navList, navIndex) => {
     });
     navList.classList.add('active');
 
-    // }
     contentList.forEach((content, contentIndex) => {
       if (navIndex === contentIndex) {
         content.style.display = 'block';
+        navMenu.classList.remove('active');
+        sectionParent.classList.add('active');
+        hamburger.classList.toggle('active');
       } else {
         content.style.display = 'none';
       }
