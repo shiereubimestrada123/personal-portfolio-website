@@ -146,6 +146,7 @@ section p {
     background-color: #d1e8e2;
     display: flex;
     justify-content: center;
+    padding-bottom: 53px;
   }
 
   aside .navMenu.active {
@@ -197,5 +198,105 @@ section p {
     width: 100%;
     z-index: -999;
     background-color: #116466;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  aside p {
+    font-size: 3rem;
+  }
+
+  aside .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 999;
+    height: calc(100vh - 100px);
+    background-color: #d1e8e2;
+    display: flex;
+    justify-content: center;
+  }
+
+  aside .navMenu.active {
+    left: 0;
+  }
+
+  aside .navMenu li {
+    line-height: 2rem;
+  }
+
+  aside .navMenu li a {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+
+  aside .navMenu li a::before,
+  aside .navMenu li a::after {
+    content: ' ';
+    height: 4rem;
+  }
+
+  aside .hamburger {
+    display: block;
+  }
+
+  aside .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  aside .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  aside .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  aside .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #6b7280;
+  }
+
+  section {
+    width: 100%;
+    z-index: -999;
+    background-color: #116466;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  aside .navMenu li {
+    list-style: none;
+    line-height: 3rem;
+    cursor: pointer;
+  }
+
+  aside .navMenu li a {
+    font-size: 1.5rem;
+    line-height: 4rem;
+    padding: 0rem 2rem;
   }
 }
