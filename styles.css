@@ -102,19 +102,8 @@ section p {
 }
 
 /* media query */
-@media only screen and (max-width: 320px) {
-  aside .navMenu li a {
-    font-size: 1rem;
-  }
 
-  aside .navMenu li a::before,
-  aside .navMenu li a::after {
-    content: ' ';
-    height: 3rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575.98px) {
   #container {
     display: flex;
     flex-direction: column;
@@ -159,13 +148,14 @@ section p {
 
   aside .navMenu li a {
     font-size: 1rem;
-    line-height: 3rem;
+    line-height: 2rem;
+    margin: 0.5rem;
   }
 
   aside .navMenu li a::before,
   aside .navMenu li a::after {
     content: ' ';
-    height: 3rem;
+    height: 2rem;
   }
 
   aside .hamburger {
@@ -201,7 +191,7 @@ section p {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #container {
     display: flex;
     flex-direction: column;
@@ -212,24 +202,137 @@ section p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 8px;
   }
 
   aside p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   aside .navMenu {
     position: fixed;
     left: -100%;
-    top: 100px;
+    top: 53px;
     gap: 0;
     flex-direction: column;
     width: 100%;
     text-align: center;
     transition: 0.3s;
     z-index: 999;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 53px);
+    background-color: #d1e8e2;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 53px;
+  }
+
+  aside .navMenu.active {
+    left: 0;
+  }
+
+  aside .navMenu li {
+    line-height: 1rem;
+  }
+
+  aside .navMenu li a {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 0.5rem;
+  }
+
+  aside .navMenu li a::before,
+  aside .navMenu li a::after {
+    content: ' ';
+    height: 2rem;
+  }
+
+  aside .hamburger {
+    display: block;
+  }
+
+  aside .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  aside .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  aside .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  aside .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #6b7280;
+  }
+
+  section {
+    width: 100%;
+    z-index: -999;
+    background-color: #116466;
+  }
+}
+
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+} */
+
+/* @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+  }
+} */
+
+/* @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+  }
+} */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: orange; */
+  }
+
+  aside {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  aside p {
+    font-size: 2.5rem;
+  }
+
+  aside .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 55px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 999;
+    height: calc(100vh - 55px);
     background-color: #d1e8e2;
     display: flex;
     justify-content: center;
@@ -240,18 +343,18 @@ section p {
   }
 
   aside .navMenu li {
-    line-height: 2rem;
+    line-height: 1rem;
   }
 
   aside .navMenu li a {
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   aside .navMenu li a::before,
   aside .navMenu li a::after {
     content: ' ';
-    height: 4rem;
+    height: 2rem;
   }
 
   aside .hamburger {
