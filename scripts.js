@@ -9,6 +9,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navMenu');
 
 const sectionParent = document.querySelector('section');
+const loader = document.querySelector('.loader');
 
 handleNavList.forEach((navList, navIndex) => {
   navList.addEventListener('click', (e) => {
@@ -17,6 +18,13 @@ handleNavList.forEach((navList, navIndex) => {
       navList.classList.remove('active');
     });
     navList.classList.add('active');
+    loader.classList.add('active');
+    if ((loader.style.display = 'block')) {
+      console.log('asd');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1000);
+    }
 
     contentList.forEach((content, contentIndex) => {
       if (navIndex === contentIndex) {

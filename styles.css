@@ -6,10 +6,32 @@
   box-sizing: border-box;
 }
 
+.loader {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 75%;
+  height: 100%;
+  background-color: orange;
+  display: none;
+}
+
+.loader p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 #container {
   display: flex;
   height: 100vh;
   width: 100%;
+}
+
+.loader.active {
+  display: block;
 }
 
 aside {
@@ -102,8 +124,25 @@ section p {
 }
 
 /* media query */
-
 @media only screen and (max-width: 575.98px) {
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    display: none;
+  }
+
+  .loader p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
   #container {
     display: flex;
     flex-direction: column;
@@ -192,6 +231,24 @@ section p {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    display: none;
+  }
+
+  .loader p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
   #container {
     display: flex;
     flex-direction: column;
@@ -279,35 +336,28 @@ section p {
   }
 }
 
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  #container {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-  }
-} */
-
-/* @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
-  #container {
-    display: flex;
-    flex-direction: column;
-    background-color: orange;
-  }
-} */
-
-/* @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
-  #container {
-    display: flex;
-    flex-direction: column;
-    background-color: orange;
-  }
-} */
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    display: none;
+  }
+
+  .loader p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
   #container {
     display: flex;
     flex-direction: column;
-    /* background-color: orange; */
   }
 
   aside {
