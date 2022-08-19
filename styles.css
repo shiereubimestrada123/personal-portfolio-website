@@ -18,20 +18,32 @@
   left: 25%;
   width: 75%;
   height: 100vh;
-  background-color: orange;
+  background-color: #2c3531;
   display: none;
-}
-
-.loader p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vh;
-  height: 100vh;
 }
 
 .loader.active {
   display: block;
+}
+
+.loader .progressbar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background-color: #f5f5f5;
+  top: 50%;
+  margin: auto;
+}
+
+.loader .progress {
+  width: 10%;
+  background-color: #116466;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 0.4rem;
+  color: #f5f5f5;
+  padding: 1rem;
+  font-size: 2rem;
 }
 
 aside {
@@ -130,30 +142,42 @@ section p {
     flex-direction: column;
   }
 
-  aside {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 8px;
-  }
-
   .loader {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: orange;
+    background-color: #2c3531;
     display: none;
   }
 
-  .loader p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .loader .progressbar {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    background-color: #f5f5f5;
+    top: 45%;
+    margin: auto;
+  }
+
+  .loader .progress {
+    width: 10%;
+    background-color: #116466;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.4rem;
+    color: #f5f5f5;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  aside {
     width: 100%;
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
   }
 
   aside p {
@@ -242,16 +266,28 @@ section p {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: orange;
+    background-color: #2c3531;
     display: none;
   }
 
-  .loader p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+  .loader .progressbar {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    background-color: #f5f5f5;
+    top: 45%;
+    margin: auto;
+  }
+
+  .loader .progress {
+    width: 10%;
+    background-color: #116466;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.4rem;
+    color: #f5f5f5;
+    padding: 1rem;
+    font-size: 2rem;
   }
 
   aside {
@@ -348,16 +384,28 @@ section p {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: orange;
+    background-color: #2c3531;
     display: none;
   }
 
-  .loader p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+  .loader .progressbar {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    background-color: #f5f5f5;
+    top: 45%;
+    margin: auto;
+  }
+
+  .loader .progress {
+    width: 10%;
+    background-color: #116466;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.4rem;
+    color: #f5f5f5;
+    padding: 1rem;
+    font-size: 2rem;
   }
 
   aside {
