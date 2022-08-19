@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+#container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
 .loader {
   position: absolute;
   top: 0;
@@ -21,13 +27,7 @@
   justify-content: center;
   align-items: center;
   width: 100vh;
-  height: 100%;
-}
-
-#container {
-  display: flex;
   height: 100vh;
-  width: 100%;
 }
 
 .loader.active {
@@ -125,24 +125,6 @@ section p {
 
 /* media query */
 @media only screen and (max-width: 575.98px) {
-  .loader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: orange;
-    display: none;
-  }
-
-  .loader p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
   #container {
     display: flex;
     flex-direction: column;
@@ -154,6 +136,24 @@ section p {
     flex-direction: row;
     justify-content: space-between;
     padding: 8px;
+  }
+
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: orange;
+    display: none;
+  }
+
+  .loader p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
   }
 
   aside p {
@@ -231,12 +231,17 @@ section p {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .loader {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: orange;
     display: none;
   }
@@ -246,12 +251,7 @@ section p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-  }
-
-  #container {
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
   }
 
   aside {
@@ -337,12 +337,17 @@ section p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .loader {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: orange;
     display: none;
   }
@@ -352,12 +357,7 @@ section p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-  }
-
-  #container {
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
   }
 
   aside {
