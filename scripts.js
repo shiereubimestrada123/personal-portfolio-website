@@ -10,7 +10,7 @@ const navMenu = document.querySelector('.navMenu');
 
 const sectionParent = document.querySelector('section');
 const loader = document.querySelector('.loader');
-const progress = document.querySelector('.progress'); //get element
+const progress = document.querySelector('.progress');
 
 handleNavList.forEach((navList, navIndex) => {
   navList.addEventListener('click', (e) => {
@@ -32,8 +32,8 @@ handleNavList.forEach((navList, navIndex) => {
           i = 0;
         } else {
           width++;
-          progress.style.width = width + '%';
-          progress.innerHTML = width + '%';
+          progress.style.width = `${width}%`;
+          progress.innerHTML = `${width}%`;
         }
       }
 

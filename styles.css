@@ -89,6 +89,7 @@ aside .navMenu li a {
 
 aside .navMenu li a.active {
   color: #f0f0f0;
+  pointer-events: none;
 }
 
 aside .navMenu li a::before,
