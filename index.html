@@ -2,56 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>My Portfolio Website</title>
+    <title>Vite + React</title>
   </head>
   <body>
-    <main id="container">
-      <aside class="animate__animated animate__fadeInLeft">
-        <p class="initial">SE</p>
-        <ul class="navMenu">
-          <li class="navList">
-            <a href="" class="active">Home</a>
-          </li>
-          <li class="navList">
-            <a href="">About</a>
-          </li>
-          <li class="navList">
-            <a href="">Skills</a>
-          </li>
-          <li class="navList">
-            <a href="">Projects</a>
-          </li>
-          <li class="navList">
-            <a href="">Contacts</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </aside>
-      <section class="animate__animated animate__rotateInDownLeft">
-        <p class="content" style="display: block">Home</p>
-        <p class="content" style="display: none">About</p>
-        <p class="content" style="display: none">Skills</p>
-        <p class="content" style="display: none">Projects</p>
-        <p class="content" style="display: none">Contacts</p>
-      </section>
-    </main>
-
-    <div class="loader">
-      <div class="progressbar">
-        <div class="progress"></div>
-      </div>
-    </div>
-    <script src="scripts.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
