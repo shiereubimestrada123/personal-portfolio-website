@@ -5,17 +5,17 @@ const Navbar = () => {
   return (
     <div className='h-screen' id='home'>
       <header>
-        <nav>
+        <nav className='fixed top-0 left-0 bottom-0 z-50 ease-in duration-300 overflow-y-auto'>
           <ul>
             <li>
               <Link
-                to='hero'
+                to='home'
                 spy={true}
                 smooth={true}
                 offset={50}
                 duration={500}
                 href='#home'
-                class='nav-link scrollto active'
+                className='nav-link scrollto active'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -42,7 +42,7 @@ const Navbar = () => {
                 // offset={0}
                 duration={500}
                 href='#about'
-                class='nav-link scrollto'
+                className='nav-link scrollto'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -69,7 +69,7 @@ const Navbar = () => {
                 // offset={50}
                 duration={500}
                 href='#portfolio'
-                class='nav-link scrollto'
+                className='nav-link scrollto'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -96,7 +96,7 @@ const Navbar = () => {
                 // offset={50}
                 duration={500}
                 href='#contact'
-                class='nav-link scrollto'
+                className='nav-link scrollto'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
