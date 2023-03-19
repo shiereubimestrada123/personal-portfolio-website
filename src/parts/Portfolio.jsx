@@ -1,10 +1,16 @@
-import React from 'react';
+import { useNav } from '../hooks/useNav';
 
 const Portfolio = () => {
+  const portfolioRef = useNav('Portfolio');
+
   return (
-    <div className='h-screen' id='portfolio'>
+    <section
+      ref={portfolioRef}
+      id='portfolioSection'
+      className='h-screen flex flex-col'
+    >
       Portfolio
-    </div>
+    </section>
   );
 };
 

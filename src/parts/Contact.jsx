@@ -1,10 +1,16 @@
-import React from 'react';
+import { useNav } from '../hooks/useNav';
 
 const Contact = () => {
+  const contactRef = useNav('Contact');
+
   return (
-    <div className='h-screen' id='contact'>
+    <section
+      ref={contactRef}
+      id='contactSection'
+      className='h-screen flex flex-col'
+    >
       Contact
-    </div>
+    </section>
   );
 };
 

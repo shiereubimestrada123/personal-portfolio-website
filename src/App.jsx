@@ -5,15 +5,22 @@ import About from './parts/About';
 import Portfolio from './parts/Portfolio';
 import Contact from './parts/Contact';
 
+import Header from './components/Header';
+
+import NavProvider from './contexts/NavContext';
+
 import './App.css';
 
 function App() {
   return (
     <>
-      <Hero />
-      <About />
-      <Portfolio />
-      <Contact />
+      <NavProvider>
+        <Header />
+        <Hero />
+        <About />
+        <Portfolio />
+        <Contact />
+      </NavProvider>
     </>
   );
 }
