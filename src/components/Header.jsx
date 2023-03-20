@@ -5,11 +5,11 @@ import SE from '../assets/se.png';
 const Header = () => {
   const { activeLinkId } = useContext(NavContext);
 
-  const navLinks = ['Hero', 'About', 'Portfolio', 'Contact'];
+  const navLinks = ['Home', 'About', 'Portfolio', 'Contact'];
 
   const handleClickLogo = () => {
     document
-      .getElementById('heroSection')
+      .getElementById('homeSection')
       .scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -23,24 +23,51 @@ const Header = () => {
     };
 
     return (
-      <ul key={nav}>
+      <ul key={nav} className='lg:block md:block hidden'>
         <li>
-          <button onClick={handleClickNav}>{nav}</button>
+          <button
+            onClick={handleClickNav}
+            className={
+              activeLinkId === nav
+                ? 'text-blue-400 text-2xl'
+                : 'line-through text-xl'
+            }
+          >
+            {nav}
+          </button>
         </li>
       </ul>
     );
   };
 
   return (
-    <header className='fixed flex items-center justify-around left-0 right-0 mt-2'>
-      <img
-        onClick={handleClickLogo}
-        src={SE}
-        alt='SE'
-        className='h-20 w-20 cursor-pointer'
-      />
-      {navLinks.map((nav) => renderNavLink(nav))}
-    </header>
+    <>
+      <header className='fixed flex items-center lg:justify-around md:justify-around justify-between mx-2 left-0 right-0 mt-2'>
+        <img
+          onClick={handleClickLogo}
+          src={SE}
+          alt='SE'
+          className='h-20 w-20 cursor-pointer'
+        />
+        {navLinks.map((nav) => renderNavLink(nav))}
+        <div className='lg:hidden md:hidden block'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={1.5}
+            stroke='currentColor'
+            className='w-6 h-6'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+            />
+          </svg>
+        </div>
+      </header>
+    </>
   );
 };
 

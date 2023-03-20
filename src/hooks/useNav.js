@@ -10,7 +10,7 @@ export const useNav = (navLinkId) => {
 
   useEffect(() => {
     if (isOnScreen) setActiveLinkId(navLinkId);
-  }, []);
+  }, [isOnScreen, setActiveLinkId, navLinkId]);
 
   return ref;
 };

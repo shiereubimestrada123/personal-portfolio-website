@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Hero from './parts/Hero';
+import Home from './parts/Home';
 import About from './parts/About';
 import Portfolio from './parts/Portfolio';
 import Contact from './parts/Contact';
 
-import Header from './components/Header';
+// import Header from './components/Header';
 
 import NavProvider from './contexts/NavContext';
 
@@ -15,8 +15,8 @@ function App() {
   return (
     <>
       <NavProvider>
-        <Header />
-        <Hero />
+        {/* <Header /> */}
+        <Home />
         <About />
         <Portfolio />
         <Contact />
