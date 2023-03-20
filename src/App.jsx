@@ -8,6 +8,7 @@ import Contact from './parts/Contact';
 // import Header from './components/Header';
 
 import NavProvider from './contexts/NavContext';
+import HamburgerProvider from './contexts/HamburgerContext';
 
 import './App.css';
 
@@ -15,11 +16,13 @@ function App() {
   return (
     <>
       <NavProvider>
-        {/* <Header /> */}
-        <Home />
-        <About />
-        <Portfolio />
-        <Contact />
+        <HamburgerProvider>
+          {/* <Header /> */}
+          <Home />
+          <About />
+          <Portfolio />
+          <Contact />
+        </HamburgerProvider>
       </NavProvider>
     </>
   );

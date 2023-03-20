@@ -1,11 +1,17 @@
 import { useContext } from 'react';
 import { NavContext } from '../contexts/NavContext';
+import { HamburgerContext } from '../contexts/HamburgerContext';
 import SE from '../assets/se.png';
 
 const Header = () => {
   const { activeLinkId } = useContext(NavContext);
+  const { toggleHamburger, setToggleHamburger } = useContext(HamburgerContext);
 
   const navLinks = ['Home', 'About', 'Portfolio', 'Contact'];
+
+  const handleToggleHamburger = () => {
+    setToggleHamburger(true);
+  };
 
   const handleClickLogo = () => {
     document
@@ -50,22 +56,27 @@ const Header = () => {
           className='h-20 w-20 cursor-pointer'
         />
         {navLinks.map((nav) => renderNavLink(nav))}
-        <div className='lg:hidden md:hidden block'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            strokeWidth={1.5}
-            stroke='currentColor'
-            className='w-6 h-6'
+        {!toggleHamburger && (
+          <div
+            onClick={handleToggleHamburger}
+            className='lg:hidden md:hidden block'
           >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
-            />
-          </svg>
-        </div>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='w-6 h-6'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+              />
+            </svg>
+          </div>
+        )}
       </header>
     </>
   );
