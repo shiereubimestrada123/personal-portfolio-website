@@ -1,40 +1,12 @@
 import { useContext } from 'react';
 import Wave from 'react-wavify';
 import Header from '../components/Header';
+import MobileNav from '../components/MobileNav';
 
 import { useNav } from '../hooks/useNav';
 
-import { HamburgerContext } from '../contexts/HamburgerContext';
-
 const Home = () => {
   const homeRef = useNav('Home');
-  const { toggleHamburger, setToggleHamburger } = useContext(HamburgerContext);
-
-  const handleToggleHamburger = () => {
-    setToggleHamburger(false);
-  };
-
-  const renderHamburger = (
-    <div className='fixed h-40 w-full bg-slate-400 z-50'>
-      <div className='flex justify-end lg:hidden md:hidden'>
-        <svg
-          onClick={handleToggleHamburger}
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          strokeWidth={1.5}
-          stroke='currentColor'
-          className='w-6 h-6'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M6 18L18 6M6 6l12 12'
-          />
-        </svg>
-      </div>
-    </div>
-  );
 
   const renderHomeDetails = (
     <div className='flex justify-center items-center h-3/4'>
@@ -125,8 +97,8 @@ const Home = () => {
         ref={homeRef}
         id='homeSection'
       >
-        {toggleHamburger && renderHamburger}
         <Header />
+        <MobileNav />
         {renderHomeDetails}
         {renderWave}
       </section>
