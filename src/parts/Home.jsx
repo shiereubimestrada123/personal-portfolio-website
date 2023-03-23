@@ -11,7 +11,7 @@ const Home = () => {
   const renderHomeDetails = (
     <div className='flex justify-center items-center h-3/4'>
       <div className='flex justify-around w-full'>
-        <div className='flex items-center justify-evenly gap-10'>
+        <div className='flex items-center gap-10'>
           <div className='flex flex-col gap-4 ml-2'>
             <div>
               <svg
@@ -45,7 +45,7 @@ const Home = () => {
             </div>
           </div>
           <div className='flex flex-col gap-2'>
-            <p className='flex items-center gap-4 text-5xl font-black'>
+            <p className='flex items-center lg:gap-4 md:gap-4 gap-2 lg:text-5xl md:text-5xl text-2xl font-black'>
               Shiereubim Estrada
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -53,7 +53,7 @@ const Home = () => {
                 viewBox='0 0 24 24'
                 strokeWidth={1.5}
                 stroke='currentColor'
-                className='w-10 h-10'
+                className='lg:w-10 lg:h-10 md:w-10 md:h-10 w-5 h-5'
               >
                 <path
                   strokeLinecap='round'
