@@ -1,13 +1,13 @@
-import { useContext } from 'react';
-import { NavContext } from '../contexts/NavContext';
-import { HamburgerContext } from '../contexts/HamburgerContext';
-import SE from '../assets/se.png';
+import { useContext } from "react";
+import { NavContext } from "../contexts/NavContext";
+import { HamburgerContext } from "../contexts/HamburgerContext";
+import SE from "../assets/se.png";
 
 const Header = () => {
   const { activeLinkId } = useContext(NavContext);
   const { toggleHamburger, setToggleHamburger } = useContext(HamburgerContext);
 
-  const navLinks = ['Home', 'About', 'Portfolio', 'Contact'];
+  const navLinks = ["Home", "About", "Portfolio", "Contact"];
 
   const handleToggleHamburger = () => {
     setToggleHamburger(true);
@@ -15,8 +15,8 @@ const Header = () => {
 
   const handleClickLogo = () => {
     document
-      .getElementById('homeSection')
-      .scrollIntoView({ behavior: 'smooth' });
+      .getElementById("homeSection")
+      .scrollIntoView({ behavior: "smooth" });
   };
 
   const renderNavLink = (nav) => {
@@ -25,18 +25,18 @@ const Header = () => {
     const handleClickNav = () => {
       document
         .getElementById(scrollToId)
-        .scrollIntoView({ behavior: 'smooth' });
+        .scrollIntoView({ behavior: "smooth" });
     };
 
     return (
-      <ul key={nav} className='lg:block md:block hidden'>
+      <ul key={nav} className="lg:block md:block hidden">
         <li>
           <button
             onClick={handleClickNav}
             className={
               activeLinkId === nav
-                ? 'text-blue-400 text-2xl'
-                : 'line-through text-xl'
+                ? "text-blue-400 text-2xl"
+                : "line-through text-xl"
             }
           >
             {nav}
@@ -48,31 +48,31 @@ const Header = () => {
 
   return (
     <>
-      <header className='fixed flex items-center lg:justify-around md:justify-around justify-between mx-2 left-0 right-0 mt-2'>
+      <header className="fixed flex items-center lg:justify-around md:justify-around justify-between mx-2 left-0 right-0 mt-2 z-50">
         <img
           onClick={handleClickLogo}
           src={SE}
-          alt='SE'
-          className='h-20 w-20 cursor-pointer'
+          alt="SE"
+          className="h-20 w-20 cursor-pointer"
         />
         {navLinks.map((nav) => renderNavLink(nav))}
         {!toggleHamburger && (
           <div
             onClick={handleToggleHamburger}
-            className='lg:hidden md:hidden block'
+            className="lg:hidden md:hidden block"
           >
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke='currentColor'
-              className='w-6 h-6'
+              stroke="currentColor"
+              className="w-6 h-6"
             >
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
           </div>

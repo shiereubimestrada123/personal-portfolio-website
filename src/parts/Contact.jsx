@@ -1,13 +1,13 @@
-import { useNav } from '../hooks/useNav';
+import { useNav } from "../hooks/useNav";
 
 const Contact = () => {
-  const contactRef = useNav('Contact');
+  const contactRef = useNav("Contact");
 
   return (
     <section
       ref={contactRef}
-      id='contactSection'
-      className='h-screen flex flex-col'
+      id="contactSection"
+      className="min-h-screen flex flex-col"
     >
       Contact
     </section>

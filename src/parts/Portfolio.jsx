@@ -1,13 +1,13 @@
-import { useNav } from '../hooks/useNav';
+import { useNav } from "../hooks/useNav";
 
 const Portfolio = () => {
-  const portfolioRef = useNav('Portfolio');
+  const portfolioRef = useNav("Portfolio");
 
   return (
     <section
       ref={portfolioRef}
-      id='portfolioSection'
-      className='h-screen flex flex-col'
+      id="portfolioSection"
+      className="min-h-screen flex flex-col"
     >
       Portfolio
     </section>

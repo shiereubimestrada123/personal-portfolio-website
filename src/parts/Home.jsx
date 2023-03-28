@@ -10,7 +10,7 @@ const Home = () => {
   const homeRef = useNav("Home");
 
   const renderHomeDetails = (
-    <div className="flex justify-evenly items-center lg:ml-[10%] md:ml-[10%] ml-0 grow">
+    <div className="flex lg:justify-evenly md:justify-center justify-center items-center lg:flex-row md:flex-row flex-col-reverse lg:ml-[10%] md:ml-[10%] ml-0 grow">
       <div className="flex items-center gap-2">
         <div className="flex flex-col gap-2">
           <svg
@@ -44,7 +44,7 @@ const Home = () => {
             Shiereubim Estrada
           </p>
           <p
-            className='relative lg:text-2xl text-lg md:text-2xl mr-auto text-center before:content-[""] before:block before:absolute before:left-[0] before:inset-y-1/2 before:h-[0.2rem] lg:before:w-[25%] before:w-[10%] before:bg-slate-900
+            className='relative lg:text-2xl md:text-2xl text-lg mr-auto text-center before:content-[""] before:block before:absolute before:left-[0] before:inset-y-1/2 before:h-[0.2rem] lg:before:w-[25%] before:w-[10%] before:bg-slate-900
             after:content-[""] after:block after:absolute after:right-[0] after:inset-y-1/2 after:h-[0.2rem] lg:after:w-[25%] after:w-[10%] after:bg-slate-900
           '
           >
@@ -54,8 +54,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="lg:block md:block hidden">
-        <img src={Hero} alt="" className="lg:h-[40rem] h-auto" />
+      <div className="">
+        <img src={Hero} alt="" className="lg:h-[30rem] md:h-60 h-60" />
       </div>
     </div>
   );
@@ -77,7 +77,7 @@ const Home = () => {
   return (
     <>
       <section
-        className="h-screen flex flex-col bg-[#fff5d7]"
+        className="min-h-screen flex flex-col bg-[#fff5d7]"
         ref={homeRef}
         id="homeSection"
       >
