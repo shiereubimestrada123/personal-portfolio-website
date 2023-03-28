@@ -7,7 +7,7 @@ const Header = () => {
   const { activeLinkId } = useContext(NavContext);
   const { toggleHamburger, setToggleHamburger } = useContext(HamburgerContext);
 
-  const navLinks = ["Home", "About", "Portfolio", "Contact"];
+  const navLinks = ["Home", "About", "Project", "Contact"];
 
   const handleToggleHamburger = () => {
     setToggleHamburger(true);
@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed flex items-center lg:justify-around md:justify-around justify-between mx-2 left-0 right-0 mt-2 z-50">
+      <header className="fixed flex items-center lg:justify-around md:justify-around justify-between mx-2 left-0 right-0 my-2 z-50">
         <img
           onClick={handleClickLogo}
           src={SE}

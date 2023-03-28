@@ -21,7 +21,7 @@
   @media (max-width: 576px) {
     .font-outline-2 {
       -webkit-text-stroke: 1px #dee2e6;
-      font-size: 100px;
+      font-size: 80px;
       color: transparent;
     }
   }

@@ -1,5 +1,6 @@
-import { useContext } from "react";
-import Wave from "react-wavify";
+// import { useContext } from "react";
+// import Wave from "react-wavify";
+import { AnimatePresence, motion } from "framer-motion";
 import Header from "../components/Header";
 import MobileNav from "../components/MobileNav";
 import Hero from "../assets/hero.png";
@@ -11,7 +12,7 @@ const Home = () => {
 
   const renderHomeDetails = (
     <div className="flex lg:justify-evenly md:justify-center justify-center items-center lg:flex-row md:flex-row flex-col-reverse lg:ml-[10%] md:ml-[10%] ml-0 grow">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 pb-10">
         <div className="flex flex-col gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +55,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="">
-        <img src={Hero} alt="" className="lg:h-[30rem] md:h-60 h-60" />
+      <div className="pt-10">
+        <motion.img
+          src={Hero}
+          alt="Hero"
+          className="lg:h-[30rem] md:h-60 h-60"
+          animate={{ rotate: 360 }}
+          transition={{ ease: "linear", duration: 50, repeat: Infinity }}
+        />
       </div>
     </div>
   );
@@ -77,7 +84,7 @@ const Home = () => {
   return (
     <>
       <section
-        className="min-h-screen flex flex-col bg-[#fff5d7]"
+        className="lg:h-screen md:h-screen h-auto flex flex-col bg-[#fff5d7]"
         ref={homeRef}
         id="homeSection"
       >

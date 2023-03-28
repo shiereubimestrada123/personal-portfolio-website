@@ -9,7 +9,7 @@ const About = () => {
     <section
       ref={aboutRef}
       id="aboutSection"
-      className="min-h-screen flex flex-col w-full"
+      className="lg:max-h-screen md:max-h-screen h-auto flex flex-col w-full"
     >
       <div className="relative flex justify-center items-center">
         <h1 className="uppercase font-outline-2">About</h1>

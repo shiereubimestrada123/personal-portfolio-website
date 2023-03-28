@@ -7,7 +7,7 @@ const MobileNav = () => {
   const { activeLinkId } = useContext(NavContext);
   const { toggleHamburger, setToggleHamburger } = useContext(HamburgerContext);
 
-  const navLinks = ["Home", "About", "Portfolio", "Contact"];
+  const navLinks = ["Home", "About", "Project", "Contact"];
 
   const handleToggleHamburger = () => {
     setToggleHamburger(false);
@@ -56,7 +56,7 @@ const MobileNav = () => {
         opacity: 0,
         transition: { delay: 0.3, duration: 0.3 },
       }}
-      className="fixed h-56 w-full z-50 bg-[#ffb766]"
+      className="fixed lg:hidden md:hidden block h-56 w-full z-50 bg-[#ffb766]"
     >
       <div className="flex justify-end lg:hidden md:hidden mr-2 mt-4">
         <svg
@@ -80,7 +80,7 @@ const MobileNav = () => {
   );
 
   return (
-    <AnimatePresence className="lg:hidden md:hidden block">
+    <AnimatePresence className="">
       {toggleHamburger && renderHamburger}
     </AnimatePresence>
   );

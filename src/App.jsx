@@ -1,6 +1,6 @@
 import Home from "./parts/Home";
 import About from "./parts/About";
-import Portfolio from "./parts/Portfolio";
+import Project from "./parts/Project";
 import Contact from "./parts/Contact";
 
 import NavProvider from "./contexts/NavContext";
@@ -15,7 +15,7 @@ function App() {
         <HamburgerProvider>
           <Home />
           <About />
-          <Portfolio />
+          <Project />
           <Contact />
         </HamburgerProvider>
       </NavProvider>
